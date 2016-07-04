@@ -19,11 +19,41 @@ public class ActivityIndicatorView extends BaseIOSView {
 		PageFactory.initElements(new AppiumFieldDecorator(appiumDriver), this);
 	}
 	
-	@iOSFindBy(uiAutomator="target.frontMostApp().navigationBar().staticTexts()[\"Activity Indicator\"]")
+	/**
+	 * iOS element for Activity Indicator title.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().navigationBar().staticTexts()[\"Activity Indicators\"]")
 	IOSElement activityIndicatorTitile;
 	
+	/**
+	 * iOS element for UICatalog button.
+	 */
 	@iOSFindBy(uiAutomator="target.frontMostApp().navigationBar().buttons()[\"UICatalog\"]")
 	IOSElement uiCatalogButton;
+	
+	/**
+	 * iOS element for Gray text.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].groups()[\"GRAY\"]")
+	IOSElement grayText;
+	
+	/**
+	 * iOS element for TINTED text.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].groups()[\"TINTED\"]")
+	IOSElement tintedText;
+	
+	/**
+	 * iOS element for activity indicator (gray).
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[0].activityIndicators()[\"In progress\"]")
+	IOSElement grayActivityIndicator;
+	
+	/**
+	 * iOS element for activity indicator (tinted).
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[1].activityIndicators()[\"In progress\"]")
+	IOSElement tintedActivityIndicator;
 
 	public boolean isActivityIndicatorTitleVisible(){
 		return isUIElementVisible(this.activityIndicatorTitile);
@@ -35,5 +65,21 @@ public class ActivityIndicatorView extends BaseIOSView {
 	
 	public void navigateToUICatalogPage(){
 		this.uiCatalogButton.click();
+	}
+	
+	public boolean isGrayTextVisible(){
+		return isUIElementVisible(this.grayText);
+	}
+	
+	public boolean isTintedText(){
+		return isUIElementVisible(this.tintedText);
+	}
+	
+	public boolean isGrayActivityIndicatorVisible(){
+		return isUIElementVisible(this.grayActivityIndicator);
+	}
+	
+	public boolean isTintedActivityIndicatorVisible(){
+		return isUIElementVisible(this.tintedActivityIndicator);
 	}
 }
