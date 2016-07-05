@@ -62,6 +62,7 @@ public class BaseIOSView {
 	 * @param value
 	 */
 	public void setValueWithKeyboard(IOSElement element,String value){
+		element.clear();
 		element.click();
 		appiumIOSDriver.getKeyboard().sendKeys(value);
 	}

@@ -100,7 +100,7 @@ public class TextEntryAlertView extends BaseIOSView{
 	 * @param value
 	 */
 	public void setTextEntryAlertTextField(String value){
-		clearAndTypeTextField(this.alertTextField, value);
+		setValueWithKeyboard(this.alertTextField, value);
 	}
 	
 	/**

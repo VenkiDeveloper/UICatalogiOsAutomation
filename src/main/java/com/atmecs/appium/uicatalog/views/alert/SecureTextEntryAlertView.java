@@ -50,7 +50,7 @@ public class SecureTextEntryAlertView extends BaseIOSView{
 	/**
 	 * iOS element for Secure Text Entry alert 'TextField' .
 	 */
-	@iOSFindBy(uiAutomator="target.frontMostApp().alert().scrollViews()[0].collectionViews()[0].cells()[0].textFields()[0]")
+	@iOSFindBy(uiAutomator="target.frontMostApp().alert().scrollViews()[0].collectionViews()[0].cells()[0].secureTextFields()[0]")
 	IOSElement alertTextField;
 	
 	/**
