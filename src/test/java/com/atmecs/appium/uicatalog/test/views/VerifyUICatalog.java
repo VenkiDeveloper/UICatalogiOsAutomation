@@ -10,7 +10,7 @@ public class VerifyUICatalog extends BaseIOSTest{
 
 	@Test
 	public void verifyActionSheetsOnUICatalogPage(){
-		UICatalogView catalogView = new UICatalogView(this.iosDriver);
+		UICatalogView catalogView = new UICatalogView(this.appiumIOSDriver);
 		Assert.assertTrue(catalogView.isActionSheetsVisible(), "Action Sheets not visible on UICatalog Page.");
 	}
 }

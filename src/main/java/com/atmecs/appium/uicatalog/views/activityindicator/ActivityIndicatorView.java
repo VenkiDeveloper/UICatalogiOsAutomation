@@ -1,7 +1,8 @@
-package com.atmecs.appium.uicatalog.views;
+package com.atmecs.appium.uicatalog.views.activityindicator;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import com.atmecs.appium.uicatalog.views.BaseIOSView;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -14,7 +15,7 @@ public class ActivityIndicatorView extends BaseIOSView {
 	 * Constructor Initialization.
 	 * @param appiumDriver
 	 */
-	public ActivityIndicatorView(AppiumDriver<WebElement> appiumDriver) {
+	public ActivityIndicatorView(AppiumDriver<IOSElement> appiumDriver) {
 		super(appiumDriver);
 		PageFactory.initElements(new AppiumFieldDecorator(appiumDriver), this);
 	}

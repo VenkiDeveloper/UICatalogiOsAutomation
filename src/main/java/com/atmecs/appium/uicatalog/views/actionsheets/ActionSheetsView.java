@@ -1,6 +1,5 @@
 package com.atmecs.appium.uicatalog.views.actionsheets;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.atmecs.appium.uicatalog.views.BaseIOSView;
@@ -12,9 +11,9 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class ActionSheetsView extends BaseIOSView{
 
-	public ActionSheetsView(AppiumDriver<WebElement> appiumDriver) {
+	public ActionSheetsView(AppiumDriver<IOSElement> appiumDriver) {
 		super(appiumDriver);
-		PageFactory.initElements(new AppiumFieldDecorator(this.appiumDriver), this);
+		PageFactory.initElements(new AppiumFieldDecorator(this.appiumIOSDriver), this);
 	}
 	
 	@iOSFindBy(uiAutomator="target.frontMostApp().navigationBar().staticTexts()[\"Action Sheets\"]")

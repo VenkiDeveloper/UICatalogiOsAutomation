@@ -6,21 +6,21 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.atmecs.appium.uicatalog.test.BaseIOSTest;
-import com.atmecs.appium.uicatalog.views.ActivityIndicatorView;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.actionsheets.ActionSheetsView;
+import com.atmecs.appium.uicatalog.views.activityindicator.ActivityIndicatorView;
 
 public class VerifyActivityIndicators extends BaseIOSTest{
 
 	@BeforeMethod
 	public void beforeMethodTapActionSheets(){
-		UICatalogView catalogView = new UICatalogView(this.iosDriver);
+		UICatalogView catalogView = new UICatalogView(this.appiumIOSDriver);
 		catalogView.tapActivityIndicator();
 	}
 	
 	@Test
 	public void verifyActivityIndicatorUIElements(){
-		ActivityIndicatorView activityIndicatorView = new ActivityIndicatorView(iosDriver);
+		ActivityIndicatorView activityIndicatorView = new ActivityIndicatorView(appiumIOSDriver);
 		Assert.assertTrue(activityIndicatorView.isActivityIndicatorTitleVisible(),"Activity Indicator title is not visible.");
 		Assert.assertTrue(activityIndicatorView.isUICatalogButtonVisible(),"UI Catalog button is not visible.");
 		Assert.assertTrue(activityIndicatorView.isGrayTextVisible(),"Gray text is not visible.");
@@ -31,7 +31,7 @@ public class VerifyActivityIndicators extends BaseIOSTest{
 	
 	@AfterMethod
 	public void afterMethodNavigateToActionSheets(){
-		ActionSheetsView actionSheetsView = new ActionSheetsView(iosDriver);
+		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
 		actionSheetsView.navigateToUICatalogPage();
 	}
 }

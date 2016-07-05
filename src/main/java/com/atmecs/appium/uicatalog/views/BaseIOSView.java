@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.ios.IOSElement;
 
 public class BaseIOSView {
 
-	protected AppiumDriver<WebElement> appiumDriver;
+	protected AppiumDriver<IOSElement> appiumIOSDriver;
 	
-	public BaseIOSView(AppiumDriver<WebElement> appiumDriver){
-		this.appiumDriver = appiumDriver;
+	public BaseIOSView(AppiumDriver<IOSElement> appiumDriver){
+		this.appiumIOSDriver = appiumDriver;
 	}
 	
 	/**
@@ -21,7 +22,7 @@ public class BaseIOSView {
 	public boolean isUIElementVisible(By by) {
 		boolean isUIElementVisible = false;
 		try {
-			appiumDriver.findElement(by);
+			appiumIOSDriver.findElement(by);
 			isUIElementVisible = true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -45,4 +46,23 @@ public class BaseIOSView {
 		return isUIElementVisible;
 	}
 	
+	/**
+	 * Method to set text field value.
+	 * @param element
+	 * @param value
+	 */
+	public void clearAndTypeTextField(IOSElement element,String value){
+		element.clear();
+		element.sendKeys(value);
+	}
+	
+	/**
+	 * Method to set text field value.
+	 * @param element
+	 * @param value
+	 */
+	public void setValueWithKeyboard(IOSElement element,String value){
+		element.click();
+		appiumIOSDriver.getKeyboard().sendKeys(value);
+	}
 }
