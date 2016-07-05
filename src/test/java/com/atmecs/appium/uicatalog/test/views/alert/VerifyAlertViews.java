@@ -46,17 +46,20 @@ public class VerifyAlertViews extends BaseIOSTest{
 	
 	@Test
 	public void verifySimpleAlertUIElements(){
+		AlertViews alertViews = new AlertViews(appiumIOSDriver);
+		alertViews.tapSimpleAlertButton();
 		SimpleAlertView simpleAlertView = new SimpleAlertView(appiumIOSDriver);
 		Assert.assertTrue(simpleAlertView.isSimpleAlertTitleVisible(),"Simple Alert title is not visible.");
 		Assert.assertTrue(simpleAlertView.isSimpleAlertBodyTextVisible(),"Simple Alert body text is not visible.");
 		Assert.assertTrue(simpleAlertView.isSimpleAlertOKButtonVisible(),"Simple Alert OK button  is not visible.");
 		simpleAlertView.tapSimpleAlertOKButton();
-		AlertViews alertViews = new AlertViews(appiumIOSDriver);
 		Assert.assertTrue(alertViews.isSimpleAlertButtonVisible(),"Simple Alert button is not visible on Alert Views.");
 	}
 	
 	@Test
 	public void verifyOkayOrCancelAlertUIElements(){
+		AlertViews alertViews = new AlertViews(appiumIOSDriver);
+		alertViews.tapOkayOrCancelAlertButton();
 		OkayOrCancelAlertView okayOrCancelAlertView = new OkayOrCancelAlertView(appiumIOSDriver);
 		Assert.assertTrue(okayOrCancelAlertView.isOkayOrCancelAlertTitleVisible(),"Okay/Cancel Alert title is not visible.");
 		Assert.assertTrue(okayOrCancelAlertView.isOkayOrCancelAlertBodyTextVisible(),"Okay/Cancel Alert body text is not visible.");
@@ -64,12 +67,13 @@ public class VerifyAlertViews extends BaseIOSTest{
 		Assert.assertTrue(okayOrCancelAlertView.isOkayOrCancelAlertCancelButtonVisible(),"Okay/Cancel Alert Cancel button  is not visible.");
 		Reporter.log("Tap on 'OK' button");
 		okayOrCancelAlertView.tapOkayOrCancelAlertOKButton();
-		AlertViews alertViews = new AlertViews(appiumIOSDriver);
 		Assert.assertTrue(alertViews.isOKayOrCancelAlertButtonVisible(),"Okay/Cancel Alert button is not visible on Alert Views.");
 	}
 	
 	@Test
 	public void verifyOtherAlertUIElements(){
+		AlertViews alertViews = new AlertViews(appiumIOSDriver);
+		alertViews.tapOtherAlertButton();
 		OtherAlertView otherAlertView = new OtherAlertView(appiumIOSDriver);
 		Assert.assertTrue(otherAlertView.isOtherAlertTitleVisible(),"Other Alert title is not visible.");
 		Assert.assertTrue(otherAlertView.isOtherAlertBodyTextVisible(),"Other Alert body text is not visible.");
@@ -78,12 +82,13 @@ public class VerifyAlertViews extends BaseIOSTest{
 		Assert.assertTrue(otherAlertView.isOtherAlertCancelButtonVisible(),"Other Alert Cancel button is not visible.");
 		Reporter.log("Tap on 'Cancel' button");
 		otherAlertView.tapOtherAlertCancelButton();
-		AlertViews alertViews = new AlertViews(appiumIOSDriver);
 		Assert.assertTrue(alertViews.isOtherAlertButtonVisible(),"Other Alert button is not visible on Alert Views.");
 	}
 	
 	@Test
 	public void verifyTextEntryAlertUIElements(){
+		AlertViews alertViews = new AlertViews(appiumIOSDriver);
+		alertViews.tapTextEntryAlertButton();
 		TextEntryAlertView textEntryAlertView = new TextEntryAlertView(appiumIOSDriver);
 		Assert.assertTrue(textEntryAlertView.isTextEntryAlertTitleVisible(),"Text Entry Alert title is not visible.");
 		Assert.assertTrue(textEntryAlertView.isTextEntryAlertBodyTextVisible(),"Text Entry Alert body text is not visible.");
@@ -97,12 +102,13 @@ public class VerifyAlertViews extends BaseIOSTest{
 		Reporter.log("Tap on 'OK' button");
 		textEntryAlertView.tapTextEntryAlertOKButton();
 		
-		AlertViews alertViews = new AlertViews(appiumIOSDriver);
 		Assert.assertTrue(alertViews.isTextEntryAlertButtonVisible(),"Text Entry Alert button is not visible on Alert Views.");
 	}
 	
 	@Test
 	public void verifySecureTextEntryAlertUIElements(){
+		AlertViews alertViews = new AlertViews(appiumIOSDriver);
+		alertViews.tapSecureTextEntryAlertButton();
 		SecureTextEntryAlertView textEntryAlertView = new SecureTextEntryAlertView(appiumIOSDriver);
 		Assert.assertTrue(textEntryAlertView.isSecureTextEntryAlertTitleVisible(),"Secure Text Entry Alert title is not visible.");
 		Assert.assertTrue(textEntryAlertView.isSecureTextEntryAlertBodyTextVisible(),"Secure Text Entry Alert body text is not visible.");
@@ -120,7 +126,6 @@ public class VerifyAlertViews extends BaseIOSTest{
 		Reporter.log("Tap on 'OK' button");
 		textEntryAlertView.tapSecureTextEntryAlertOKButton();
 		
-		AlertViews alertViews = new AlertViews(appiumIOSDriver);
 		Assert.assertTrue(alertViews.isSecureTextEntryAlertButtonVisible(),"Secure Text Entry Alert button is not visible on Alert Views.");
 	}
 	
