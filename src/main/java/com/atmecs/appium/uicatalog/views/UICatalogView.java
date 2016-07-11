@@ -32,6 +32,11 @@ public class UICatalogView extends BaseIOSView{
 	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Alert Views\"]")
 	IOSElement alertViews;
 	
+	/**
+	 * iOS element for Buttons.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Buttons\"]")
+	IOSElement buttons;
 	
 	/**
 	 * Method to click on action sheets
@@ -73,5 +78,19 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	public void tapAlertViews(){
 		this.alertViews.click();
+	}
+	
+	/**
+	 * @return boolean (true if buttons visible else false)
+	 */
+	public boolean isButtonsVisible(){
+		return isUIElementVisible(this.buttons);
+	}
+	
+	/**
+	 * Method to tap Buttons.
+	 */
+	public void tapButtons(){
+		this.buttons.click();
 	}
 }
