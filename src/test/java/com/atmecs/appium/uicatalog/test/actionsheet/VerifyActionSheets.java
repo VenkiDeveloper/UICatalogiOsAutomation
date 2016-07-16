@@ -1,4 +1,4 @@
-package com.atmecs.appium.uicatalog.test.views.actionsheet;
+package com.atmecs.appium.uicatalog.test.actionsheet;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

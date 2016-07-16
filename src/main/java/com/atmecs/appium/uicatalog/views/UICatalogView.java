@@ -39,6 +39,12 @@ public class UICatalogView extends BaseIOSView{
 	IOSElement buttons;
 	
 	/**
+	 * iOS element for Date Picker.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Date Picker\"]")
+	IOSElement datePicker;
+	
+	/**
 	 * Method to click on action sheets
 	 */
 	public void tapActionSheets(){
@@ -92,5 +98,19 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	public void tapButtons(){
 		this.buttons.click();
+	}
+	
+	/**
+	 * @return boolean (true if Date Picker visible else false)
+	 */
+	public boolean isDatePickerVisible(){
+		return isUIElementVisible(this.datePicker);
+	}
+	
+	/**
+	 * Method to tap Date Picker.
+	 */
+	public void tapDatePicker(){
+		this.datePicker.click();
 	}
 }

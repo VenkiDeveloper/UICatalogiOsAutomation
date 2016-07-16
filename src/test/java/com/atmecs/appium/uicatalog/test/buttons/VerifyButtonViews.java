@@ -1,4 +1,4 @@
-package com.atmecs.appium.uicatalog.test.views.buttons;
+package com.atmecs.appium.uicatalog.test.buttons;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -34,9 +34,9 @@ public class VerifyButtonViews extends BaseIOSTest{
 		Assert.assertTrue(buttonsView.isContactAddTextVisible(),"Contact add text is not visible.");
 		Assert.assertTrue(buttonsView.isdetailDisclosureTextVisible(),"Details Disclosure add text is not visible.");
 		Assert.assertTrue(buttonsView.isImageTextVisible(), "Image text is not visible");
-		buttonsView.scrollUp();
+		buttonsView.swipeUpButtonsView();
 		Assert.assertTrue(buttonsView.isAttributedTextVisible(), "Attributed text is not visible");
-		buttonsView.scrollDown();
+		buttonsView.swipeDownButtonsView();
 	}
 	
 	@AfterMethod

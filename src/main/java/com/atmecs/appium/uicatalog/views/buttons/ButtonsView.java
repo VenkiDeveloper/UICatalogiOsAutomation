@@ -70,6 +70,12 @@ public class ButtonsView extends BaseIOSView {
 	 */
 	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].groups()[\"ATTRIBUTED TEXT\"]")
 	IOSElement attributedText;
+	
+	/**
+	 * iOS element for attributed text.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0]")
+	IOSElement swipe;
 
 	/**
 	 * @return boolean (true if buttons view title visible else false)
@@ -132,6 +138,14 @@ public class ButtonsView extends BaseIOSView {
 	 */
 	public boolean isAttributedTextVisible(){
 		return isUIElementVisible(this.attributedText);
+	}
+	
+	public void swipeUpButtonsView(){
+		swipe.scrollTo("ATTRIBUTED TEXT");
+	}
+	
+	public void swipeDownButtonsView(){
+		swipe.scrollTo("SYSTEM (TEXT)");
 	}
 	
 }
