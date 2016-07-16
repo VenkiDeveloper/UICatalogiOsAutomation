@@ -1,4 +1,4 @@
-package com.atmecs.appium.uicatalog.test.views;
+package com.atmecs.appium.uicatalog.test.uicatalog;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

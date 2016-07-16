@@ -1,4 +1,4 @@
-package com.atmecs.appium.uicatalog.test.views.alert;
+package com.atmecs.appium.uicatalog.alert;
 
 import org.testng.Assert;
 import org.testng.Reporter;

@@ -1,4 +1,4 @@
-package com.atmecs.appium.uicatalog.test.views.activityindicator;
+package com.atmecs.appium.uicatalog.test.activityindicator;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

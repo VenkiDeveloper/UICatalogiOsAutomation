@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.ios.IOSElement;
-import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class BaseIOSView {
 
@@ -15,9 +14,6 @@ public class BaseIOSView {
 	public BaseIOSView(AppiumDriver<IOSElement> appiumDriver){
 		this.appiumIOSDriver = appiumDriver;
 	}
-	
-	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow()")
-	IOSElement srcoll;
 	
 	/**
 	 * Method to verify UI element is visible or not.
@@ -73,16 +69,16 @@ public class BaseIOSView {
 	}
 	
 	/**
-	 * Method to scroll down the page.
+	 * Method to swipe down the page.
 	 */
-	public void scrollDown(){
-		this.srcoll.swipe(SwipeElementDirection.DOWN, 5000);
+	public void swipeDown(IOSElement element){
+		element.swipe(SwipeElementDirection.DOWN, 5000);
 	}
 	
 	/**
-	 * Method to scroll up the page.
+	 * Method to swipe up the page.
 	 */
-	public void scrollUp(){
-		this.srcoll.swipe(SwipeElementDirection.UP, 5000);
+	public void swipeUp(IOSElement element){
+		element.swipe(SwipeElementDirection.UP, 5000);
 	}
 }
