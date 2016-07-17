@@ -43,7 +43,14 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Date Picker\"]")
 	IOSElement datePicker;
+			
+	/**
+	 * iOS element for Image view.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Image View\"]")
+	IOSElement imageView;
 	
+			
 	/**
 	 * Method to click on action sheets
 	 */
@@ -112,5 +119,19 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	public void tapDatePicker(){
 		this.datePicker.click();
+	}
+	
+	/**
+	 * @return boolean (true if Image View visible else false)
+	 */
+	public boolean isImageViewVisible(){
+		return isUIElementVisible(this.imageView);
+	}
+	
+	/**
+	 * Method to tap Image View.
+	 */
+	public void tapImageView(){
+		this.imageView.click();
 	}
 }

@@ -18,7 +18,7 @@ import com.atmecs.appium.uicatalog.views.buttons.ButtonsView;
 public class VerifyButtonViews extends BaseIOSTest{
 	
 	@BeforeMethod
-	public void beforeMethodTapActionSheets(){
+	public void beforeMethodTapButtins(){
 		UICatalogView catalogView = new UICatalogView(this.appiumIOSDriver);
 		catalogView.tapButtons();
 	}
