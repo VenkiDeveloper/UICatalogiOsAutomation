@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 import com.atmecs.appium.uicatalog.test.BaseIOSTest;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
-import com.atmecs.appium.uicatalog.views.actionsheets.ActionSheetsView;
 import com.atmecs.appium.uicatalog.views.alert.AlertViews;
 import com.atmecs.appium.uicatalog.views.alert.OkayOrCancelAlertView;
 import com.atmecs.appium.uicatalog.views.alert.OtherAlertView;
@@ -134,7 +133,7 @@ public class VerifyAlertViews extends BaseIOSTest{
 	 */
 	@AfterMethod
 	public void afterMethodNavigateToUICatalogPage(){
-		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
-		actionSheetsView.navigateToUICatalogPage();
+		AlertViews alertViews = new AlertViews(appiumIOSDriver);
+		alertViews.navigateToUICatalogPage();
 	}
 }

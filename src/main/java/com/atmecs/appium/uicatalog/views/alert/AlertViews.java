@@ -109,5 +109,4 @@ public class AlertViews extends BaseIOSView{
 	public void tapSecureTextEntryAlertButton(){
 		this.secureTextEntryAlert.click();
 	}
-	
 }

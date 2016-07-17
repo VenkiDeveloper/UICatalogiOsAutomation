@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import com.atmecs.appium.uicatalog.test.BaseIOSTest;
 import com.atmecs.appium.uicatalog.util.DateAndTimeUtil;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
-import com.atmecs.appium.uicatalog.views.actionsheets.ActionSheetsView;
 import com.atmecs.appium.uicatalog.views.datepicker.DatePickerView;
 
 /**
@@ -56,8 +55,8 @@ public class VerifyDatePickerView extends BaseIOSTest{
 	
 	@AfterMethod
 	public void afterMethodNavigateToActionSheets(){
-		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
-		actionSheetsView.navigateToUICatalogPage();
+		DatePickerView datePickerView = new DatePickerView(appiumIOSDriver);
+		datePickerView.navigateToUICatalog();
 	}
 	
 }

@@ -50,6 +50,12 @@ public class UICatalogView extends BaseIOSView{
 	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Image View\"]")
 	IOSElement imageView;
 	
+	/**
+	 * iOS element for Page controls.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Page Control\"]")
+	IOSElement pageControls;
+	
 			
 	/**
 	 * Method to click on action sheets
@@ -133,5 +139,19 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	public void tapImageView(){
 		this.imageView.click();
+	}
+	
+	/**
+	 * @return boolean (true if Page Control visible else false)
+	 */
+	public boolean isPageControlVisible(){
+		return isUIElementVisible(this.pageControls);
+	}
+	
+	/**
+	 * Method to tap Page Control.
+	 */
+	public void tapPageControl(){
+		this.pageControls.click();
 	}
 }

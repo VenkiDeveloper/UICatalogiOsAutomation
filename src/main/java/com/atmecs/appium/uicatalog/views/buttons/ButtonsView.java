@@ -148,4 +148,11 @@ public class ButtonsView extends BaseIOSView {
 		swipe.scrollTo("SYSTEM (TEXT)");
 	}
 	
+	/**
+	 * Method to navigate to UI catalog.
+	 */
+	public void navigateToUICatalog(){
+		this.uiCatalogButton.click();
+	}
+	
 }
