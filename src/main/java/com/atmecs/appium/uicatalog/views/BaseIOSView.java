@@ -1,10 +1,12 @@
 package com.atmecs.appium.uicatalog.views;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.ios.IOSElement;
 
 public class BaseIOSView {
@@ -71,14 +73,18 @@ public class BaseIOSView {
 	/**
 	 * Method to swipe down the page.
 	 */
-	public void swipeDown(IOSElement element){
-		element.swipe(SwipeElementDirection.DOWN, 5000);
+	public void swipeDown(){
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("direction", "down");
+		appiumIOSDriver.executeScript("mobile: scroll", params);
 	}
 	
 	/**
 	 * Method to swipe up the page.
 	 */
-	public void swipeUp(IOSElement element){
-		element.swipe(SwipeElementDirection.UP, 5000);
+	public void swipeUp(){
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("direction", "up");
+		appiumIOSDriver.executeScript("mobile: scroll", params);
 	}
 }

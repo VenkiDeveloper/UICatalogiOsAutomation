@@ -56,7 +56,30 @@ public class UICatalogView extends BaseIOSView{
 	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Page Control\"]")
 	IOSElement pageControls;
 	
-			
+	/**
+	 * iOS element for Picker View.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Picker View\"]")
+	IOSElement pickerView;
+	
+	/**
+	 * iOS element for Progress Views.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Progress Views\"]")
+	IOSElement progressViews;
+	
+	/**
+	 * iOS element for Segmented Controls.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Segmented Controls\"]")
+	IOSElement segmentedControls;
+	
+	/**
+	 * iOS element for Slider View.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Sliders\"]")
+	IOSElement sliderViews;
+	
 	/**
 	 * Method to click on action sheets
 	 */
@@ -154,4 +177,62 @@ public class UICatalogView extends BaseIOSView{
 	public void tapPageControl(){
 		this.pageControls.click();
 	}
+	
+	/**
+	 * @return boolean (true if Picker View visible else false)
+	 */
+	public boolean isPickerViewVisible(){
+		return isUIElementVisible(this.pageControls);
+	}
+	
+	/**
+	 * Method to tap Picker View.
+	 */
+	public void tapPickerView(){
+		this.pickerView.click();
+	}
+	
+	/**
+	 * @return boolean (true if Progress View visible else false)
+	 */
+	public boolean isProgressViewsVisible(){
+		return isUIElementVisible(this.pageControls);
+	}
+	
+	/**
+	 * Method to tap Progress Views.
+	 */
+	public void tapProgressViews(){
+		this.progressViews.click();
+	}
+	
+	/**
+	 * @return boolean (true if Segmented Controls visible else false)
+	 */
+	public boolean isSegmentedControlsVisible(){
+		return isUIElementVisible(this.segmentedControls);
+	}
+	
+	/**
+	 * Method to tap Segmented Controls.
+	 */
+	public void tapSegmentedControlsViews(){
+		this.segmentedControls.scrollTo("Segmented Controls");
+		this.segmentedControls.click();
+	}
+	
+	/**
+	 * @return boolean (true if Slider view visible else false)
+	 */
+	public boolean isSliderssVisible(){
+		return isUIElementVisible(this.sliderViews);
+	}
+	
+	/**
+	 * Method to tap Slider Views.
+	 */
+	public void tapSlidersViews(){
+		this.sliderViews.click();
+	}
+	
 }
