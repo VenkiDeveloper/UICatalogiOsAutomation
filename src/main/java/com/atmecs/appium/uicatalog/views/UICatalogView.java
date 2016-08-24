@@ -81,10 +81,16 @@ public class UICatalogView extends BaseIOSView{
 	IOSElement sliderViews;
 	
 	/**
-	 * iOS element for Slider View.
+	 * iOS element for Steppers View.
 	 */
 	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Steppers\"]")
 	IOSElement stepperViews;
+	
+	/**
+	 * iOS element for Switches View.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Switches\"]")
+	IOSElement switchViews;
 	
 	/**
 	 * Method to click on action sheets
@@ -253,6 +259,20 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	public void tapStepperViews(){
 		this.stepperViews.click();
+	}
+	
+	/**
+	 * @return boolean (true if Switches view visible else false)
+	 */
+	public boolean isSwitchViewVisible(){
+		return isUIElementVisible(this.switchViews);
+	}
+	
+	/**
+	 * Method to tap Switch Views.
+	 */
+	public void tapSwitchViews(){
+		this.switchViews.click();
 	}
 	
 }

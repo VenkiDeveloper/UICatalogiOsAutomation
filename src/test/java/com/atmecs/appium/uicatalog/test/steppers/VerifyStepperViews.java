@@ -17,7 +17,7 @@ import com.atmecs.appium.uicatalog.views.steppers.SteppersView;
 public class VerifyStepperViews extends BaseIOSTest{
 
 	/**
-	 * Before method to tap Segmented Control Views.
+	 * Before method to tap Steppers Views.
 	 */
 	@BeforeMethod
 	public void beforeMethodTapSteppers(){
