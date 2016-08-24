@@ -73,6 +73,13 @@ public class SliderView extends BaseIOSView{
 	IOSElement customSlider;
 	
 	/**
+	 * @return boolean (true if Slider title visible else false)
+	 */
+	public boolean isSliderTitleVisible(){
+		return this.isUIElementVisible(slidersTitle);
+	}
+	
+	/**
 	 * @return boolean (true if UICatalog button visible else false)
 	 */
 	public boolean isUICatalogButtonVisible(){
@@ -152,5 +159,27 @@ public class SliderView extends BaseIOSView{
 		this.customSlider.sendKeys(sliderValue);
 	}
 	
-
+	/**
+	 * Method to get Default Slider value.
+	 * @return
+	 */
+	public String getDefaultSliderValue(){
+		return this.defaultSlider.getAttribute("value");
+	}
+	
+	/**
+	 * Method to get Tinted Slider value.
+	 * @return
+	 */
+	public String getTintedSliderValue(){
+		return this.tintedSlider.getAttribute("value");
+	}
+	
+	/**
+	 * Method to get Tinted Slider value.
+	 * @return
+	 */
+	public String getCustomSliderValue(){
+		return this.customSlider.getAttribute("value");
+	}
 }

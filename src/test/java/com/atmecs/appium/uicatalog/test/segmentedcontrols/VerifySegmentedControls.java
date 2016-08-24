@@ -15,10 +15,10 @@ import com.atmecs.appium.uicatalog.views.segmentcontrols.SegmentControlsViews;
 public class VerifySegmentedControls extends BaseIOSTest {
 
 	/**
-	 * Before method to tap Picker Views.
+	 * Before method to tap Segmented Control Views.
 	 */
 	@BeforeMethod
-	public void beforeMethodTapProgressViews(){
+	public void beforeMethodTapSegmentedControlViews(){
 		UICatalogView catalogView = new UICatalogView(this.appiumIOSDriver);
 		catalogView.swipeDown();
 		catalogView.tapSegmentedControlsViews();
