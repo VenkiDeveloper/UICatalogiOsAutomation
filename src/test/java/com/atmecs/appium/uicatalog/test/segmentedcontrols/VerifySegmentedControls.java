@@ -53,6 +53,5 @@ public class VerifySegmentedControls extends BaseIOSTest {
 	public void afterMethodNavigateToUICatalogPage(){
 		SegmentControlsViews segmentControlsVIews = new SegmentControlsViews(appiumIOSDriver);
 		segmentControlsVIews.tapUICatalogButton();
-		
 	}
 }

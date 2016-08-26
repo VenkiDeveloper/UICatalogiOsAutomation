@@ -93,6 +93,18 @@ public class UICatalogView extends BaseIOSView{
 	IOSElement switchViews;
 	
 	/**
+	 * iOS element for Text Fields View.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Text Fields\"]")
+	IOSElement textFieldViews;
+	
+	/**
+	 * iOS element for Search Bars View.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Search Bars\"]")
+	IOSElement searchBarsView;
+	
+	/**
 	 * Method to click on action sheets
 	 */
 	public void tapActionSheets(){
@@ -273,6 +285,34 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	public void tapSwitchViews(){
 		this.switchViews.click();
+	}
+	
+	/**
+	 * @return boolean (true if Text Fields view visible else false)
+	 */
+	public boolean isTextFieldsViewVisible(){
+		return isUIElementVisible(this.textFieldViews);
+	}
+	
+	/**
+	 * Method to tap Text Fields View.
+	 */
+	public void tapTextFieldsView(){
+		this.textFieldViews.click();
+	}
+	
+	/**
+	 * @return boolean (true if Search bars visible else false)
+	 */
+	public boolean isSearchBarsViewVisible(){
+		return isUIElementVisible(this.searchBarsView);
+	}
+	
+	/**
+	 * Method to tap Search Bars View.
+	 */
+	public void tapSearchBarsView(){
+		this.searchBarsView.click();
 	}
 	
 }

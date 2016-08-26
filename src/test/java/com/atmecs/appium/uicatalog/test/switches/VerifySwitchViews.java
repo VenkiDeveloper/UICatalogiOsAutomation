@@ -5,14 +5,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.atmecs.appium.uicatalog.enums.StepperEnum;
 import com.atmecs.appium.uicatalog.test.BaseIOSTest;
 import com.atmecs.appium.uicatalog.view.switches.SwitchesView;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
-import com.atmecs.appium.uicatalog.views.steppers.SteppersView;
 
+/**
+ * @author venkatesh
+ *
+ */
 public class VerifySwitchViews extends BaseIOSTest{
-
 
 	/**
 	 * Before method to tap Switches Views.
