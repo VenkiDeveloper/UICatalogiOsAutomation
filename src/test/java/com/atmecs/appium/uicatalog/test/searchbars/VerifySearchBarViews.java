@@ -17,7 +17,7 @@ import com.atmecs.appium.uicatalog.views.searchbars.SearchBarView;
  */
 public class VerifySearchBarViews extends BaseIOSTest{
 	/**
-	 * Before method to tap Segmented Control Views.
+	 * Before method to tap Search Bar Views.
 	 */
 	@BeforeMethod
 	public void beforeMethodTapSearchBarViews(){

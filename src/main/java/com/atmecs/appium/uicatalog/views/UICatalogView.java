@@ -9,6 +9,9 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class UICatalogView extends BaseIOSView{
 
+	/**
+	 * @param appiumDriver
+	 */
 	public UICatalogView(AppiumDriver<IOSElement> appiumDriver) {
 		super(appiumDriver);
 		PageFactory.initElements(new AppiumFieldDecorator(this.appiumIOSDriver), this);
@@ -103,6 +106,12 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Search Bars\"]")
 	IOSElement searchBarsView;
+	
+	/**
+	 * iOS element for Toolbars View.
+	 */
+	@iOSFindBy(uiAutomator="target.frontMostApp().mainWindow().tableViews()[0].cells()[\"Toolbars\"]")
+	IOSElement toolBarsView;
 	
 	/**
 	 * Method to click on action sheets
@@ -313,6 +322,20 @@ public class UICatalogView extends BaseIOSView{
 	 */
 	public void tapSearchBarsView(){
 		this.searchBarsView.click();
+	}
+	
+	/**
+	 * @return boolean (true if Toolbars visible else false)
+	 */
+	public boolean isToolBarsViewVisible(){
+		return isUIElementVisible(this.toolBarsView);
+	}
+	
+	/**
+	 * Method to tap Toolbars View.
+	 */
+	public void tapToolbarsView(){
+		this.toolBarsView.click();
 	}
 	
 }
