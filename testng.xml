@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="UICatalogSuite" verbose="1">
+	<listeners>
+		<listener class-name="com.atmecs.appium.uicatalog.util.TestListener" />
+	</listeners>
+	<test name="UICatalogTest">
+		<packages>
+			<package name="com.atmecs.appium.uicatalog.test.*" />
+		</packages>
+	</test>
+</suite>
