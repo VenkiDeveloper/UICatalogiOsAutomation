@@ -11,7 +11,6 @@ import com.atmecs.appium.uicatalog.views.imageview.ImageView;
 
 /**
  * @author venkatesh
- *
  */
 public class VerifyImageViews extends BaseIOSTest{
 

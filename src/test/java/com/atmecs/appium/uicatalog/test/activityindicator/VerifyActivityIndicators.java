@@ -9,6 +9,9 @@ import com.atmecs.appium.uicatalog.test.BaseIOSTest;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.activityindicator.ActivityIndicatorView;
 
+/**
+ * @author venkatesh
+ */
 public class VerifyActivityIndicators extends BaseIOSTest{
 
 	@BeforeMethod

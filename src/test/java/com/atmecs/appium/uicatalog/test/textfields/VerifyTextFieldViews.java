@@ -10,9 +10,7 @@ import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.textfields.TextFieldsView;
 
 /**
- * 
  * @author venkatesh
- *
  */
 public class VerifyTextFieldViews extends BaseIOSTest {
 

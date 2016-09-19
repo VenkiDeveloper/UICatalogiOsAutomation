@@ -1,7 +1,5 @@
 package com.atmecs.appium.uicatalog.util;
 
-import org.testng.IInvokedMethod;
-import org.testng.IInvokedMethodListener;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
@@ -13,7 +11,7 @@ import org.testng.ITestResult;
  * @author venkatesh
  *
  */
-public class TestListener implements ITestListener, ISuiteListener, IInvokedMethodListener{
+public class TestListener implements ITestListener, ISuiteListener{
 
 	@Override
 	public void onFinish(ITestContext testContext) {
@@ -22,7 +20,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 
 	@Override
 	public void onStart(ITestContext testContext) {
-		LogUtil.logInfo("Test : "+testContext.getName()+" STARTED");		
+		LogUtil.logInfo("Test : "+testContext.getName()+" STARTED");	
 	}
 
 	@Override
@@ -32,42 +30,52 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 
 	@Override
 	public void onTestFailure(ITestResult testResult) {
-		LogUtil.logInfo("########  Test case: "+testResult.getName()+": -------> FAILED #############");
+		StringBuffer sb = new StringBuffer();
+		sb.append(testResult.getTestClass()+"."+testResult.getName()+"  FAILED \n");
+		sb.append("************************************************** \n");
+		LogUtil.logInfo(sb.toString());
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult testResult) {
-		LogUtil.logInfo("########  Test case: "+testResult.getName()+": -------> SKIPPED #############");
+		StringBuffer sb = new StringBuffer();
+		sb.append(testResult.getTestClass()+"."+testResult.getName()+"    SKIPPED \n");
+		sb.append("************************************************** \n");
+		LogUtil.logInfo(sb.toString());
 	}
 
 	@Override
 	public void onTestStart(ITestResult testContext) {
-		LogUtil.logInfo("Test Case: "+testContext.getName()+" STARTED");	
+		StringBuffer sb = new StringBuffer();
+		sb.append("************************************************* \n");
+		sb.append(testContext.getTestClass()+"."+testContext.getName()+"  STARTED \n");
+		LogUtil.logInfo(sb.toString());
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult testResult) {
-		LogUtil.logInfo("########  Test case: "+testResult.getName()+": -------> PASSED #############");
-	}
-
-	@Override
-	public void afterInvocation(IInvokedMethod arg0, ITestResult arg1) {
-		
-	}
-
-	@Override
-	public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) {
-		
+		StringBuffer sb = new StringBuffer();
+		sb.append(testResult.getTestClass()+"."+testResult.getName()+"  PASSED \n");
+		sb.append("************************************************** \n");
+		LogUtil.logInfo(sb.toString());
 	}
 
 	@Override
 	public void onFinish(ISuite suite) {
-		LogUtil.logInfo("########  Suite finished: "+suite.getName()+" #################");
+		StringBuffer sb = new StringBuffer();
+		sb.append("\n ##################################################### \n");
+		sb.append("Suite :"+suite.getName()+" Finished");
+		sb.append("\n ##################################################### \n");
+		LogUtil.logInfo(sb.toString());
 	}
 
 	@Override
 	public void onStart(ISuite suite) {
-		LogUtil.logInfo("########  Suite started: "+suite.getName()+" #################");
+		StringBuffer sb = new StringBuffer();
+		sb.append("\n ##################################################### \n");
+		sb.append("         Suite: "+suite.getName()+" Started         \n");
+		sb.append(" ##################################################### \n");
+		LogUtil.logInfo(sb.toString());
 	}
 
 }

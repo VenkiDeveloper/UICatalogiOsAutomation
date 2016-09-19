@@ -14,7 +14,6 @@ import com.atmecs.appium.uicatalog.views.toolbars.ToolbarsView;
 
 /**
  * @author venkatesh
- *
  */
 public class VerifyToolbarsView extends BaseIOSTest{
 	/**

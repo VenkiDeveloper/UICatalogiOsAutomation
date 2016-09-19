@@ -11,7 +11,6 @@ import com.atmecs.appium.uicatalog.views.slider.SliderView;
 
 /**
  * @author venkatesh
- *
  */
 public class VerifySliderViews extends BaseIOSTest{
 

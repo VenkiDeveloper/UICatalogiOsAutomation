@@ -10,10 +10,8 @@ import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.searchbars.CustomSearchBarsView;
 import com.atmecs.appium.uicatalog.views.searchbars.DefaultSearchBarView;
 import com.atmecs.appium.uicatalog.views.searchbars.SearchBarView;
-
 /**
  * @author venkatesh
- *
  */
 public class VerifySearchBarViews extends BaseIOSTest{
 	/**

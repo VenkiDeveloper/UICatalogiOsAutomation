@@ -10,7 +10,6 @@ import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.progressviews.ProgressViews;
 
 /**
- * @author venkatesh
  */
 public class VerifyProgressViews extends BaseIOSTest{
 	/**

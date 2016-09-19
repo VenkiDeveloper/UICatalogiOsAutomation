@@ -11,7 +11,6 @@ import com.atmecs.appium.uicatalog.views.pagecontrol.PageControlView;
 
 /**
  * @author venkatesh
- *
  */
 public class VerifyPageControls extends BaseIOSTest{
 

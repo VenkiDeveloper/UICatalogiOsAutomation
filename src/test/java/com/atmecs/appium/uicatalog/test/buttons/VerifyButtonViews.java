@@ -10,9 +10,7 @@ import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.buttons.ButtonsView;
 
 /**
- * 
  * @author venkatesh
- *
  */
 public class VerifyButtonViews extends BaseIOSTest{
 	

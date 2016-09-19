@@ -6,7 +6,7 @@
 	</listeners>
 	<test name="UICatalogTest">
 		<packages>
-			<package name="com.atmecs.appium.uicatalog.test.*" />
+			<package name="com.atmecs.appium.uicatalog.test.actionsheet.*" />
 		</packages>
 	</test>
 </suite>

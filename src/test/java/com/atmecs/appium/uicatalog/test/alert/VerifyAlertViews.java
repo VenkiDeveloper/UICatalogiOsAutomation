@@ -16,9 +16,7 @@ import com.atmecs.appium.uicatalog.views.alert.SimpleAlertView;
 import com.atmecs.appium.uicatalog.views.alert.TextEntryAlertView;
 
 /**
- * 
  * @author venkatesh
- *
  */
 public class VerifyAlertViews extends BaseIOSTest{
 	

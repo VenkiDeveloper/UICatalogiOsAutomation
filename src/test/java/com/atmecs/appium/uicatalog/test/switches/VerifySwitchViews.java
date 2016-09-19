@@ -11,7 +11,6 @@ import com.atmecs.appium.uicatalog.views.UICatalogView;
 
 /**
  * @author venkatesh
- *
  */
 public class VerifySwitchViews extends BaseIOSTest{
 

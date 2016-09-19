@@ -12,7 +12,6 @@ import com.atmecs.appium.uicatalog.views.steppers.SteppersView;
 
 /**
  * @author venkatesh
- *
  */
 public class VerifyStepperViews extends BaseIOSTest{
 

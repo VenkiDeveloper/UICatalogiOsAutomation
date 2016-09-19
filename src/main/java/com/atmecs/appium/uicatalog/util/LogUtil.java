@@ -1,6 +1,6 @@
 package com.atmecs.appium.uicatalog.util;
 
-import org.testng.log4testng.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * This class is for Generating logger at different levels.
@@ -31,7 +31,7 @@ public class LogUtil {
 	 * @param message
 	 */
 	public static final void logInfo(String message){
-		LOG.info("%s "+message);
+		LOG.info(message);
 	}
 	
 	/**
@@ -77,7 +77,7 @@ public class LogUtil {
 	 * @param message
 	 */
 	public static final void logTestVerificationStep(String message){
-		LOG.info("Verification: %s "+message);
+		LOG.info("Verification: "+message);
 	}
 	
 }

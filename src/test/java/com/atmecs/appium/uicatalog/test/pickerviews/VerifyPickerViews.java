@@ -9,6 +9,9 @@ import com.atmecs.appium.uicatalog.test.BaseIOSTest;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.pickerview.PickerView;
 
+/**
+ * @author venkatesh
+ */
 public class VerifyPickerViews extends BaseIOSTest{
 
 	/**
