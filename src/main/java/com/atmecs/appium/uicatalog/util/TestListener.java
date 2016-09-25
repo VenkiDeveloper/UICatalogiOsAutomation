@@ -13,14 +13,16 @@ import org.testng.ITestResult;
  */
 public class TestListener implements ITestListener, ISuiteListener{
 
+	TestLogger LOG = TestLogger.getLogger(TestListener.class);
+	
 	@Override
 	public void onFinish(ITestContext testContext) {
-		LogUtil.logInfo("Test : "+testContext.getName()+" FINISHED");
+		LOG.logInfo("Test : "+testContext.getName()+" FINISHED");
 	}
 
 	@Override
 	public void onStart(ITestContext testContext) {
-		LogUtil.logInfo("Test : "+testContext.getName()+" STARTED");	
+		LOG.logInfo("Test : "+testContext.getName()+" STARTED");	
 	}
 
 	@Override
@@ -33,7 +35,7 @@ public class TestListener implements ITestListener, ISuiteListener{
 		StringBuffer sb = new StringBuffer();
 		sb.append(testResult.getTestClass()+"."+testResult.getName()+"  FAILED \n");
 		sb.append("************************************************** \n");
-		LogUtil.logInfo(sb.toString());
+		LOG.logInfo(sb.toString());
 	}
 
 	@Override
@@ -41,7 +43,7 @@ public class TestListener implements ITestListener, ISuiteListener{
 		StringBuffer sb = new StringBuffer();
 		sb.append(testResult.getTestClass()+"."+testResult.getName()+"    SKIPPED \n");
 		sb.append("************************************************** \n");
-		LogUtil.logInfo(sb.toString());
+		LOG.logInfo(sb.toString());
 	}
 
 	@Override
@@ -49,7 +51,7 @@ public class TestListener implements ITestListener, ISuiteListener{
 		StringBuffer sb = new StringBuffer();
 		sb.append("************************************************* \n");
 		sb.append(testContext.getTestClass()+"."+testContext.getName()+"  STARTED \n");
-		LogUtil.logInfo(sb.toString());
+		LOG.logInfo(sb.toString());
 	}
 
 	@Override
@@ -57,7 +59,7 @@ public class TestListener implements ITestListener, ISuiteListener{
 		StringBuffer sb = new StringBuffer();
 		sb.append(testResult.getTestClass()+"."+testResult.getName()+"  PASSED \n");
 		sb.append("************************************************** \n");
-		LogUtil.logInfo(sb.toString());
+		LOG.logInfo(sb.toString());
 	}
 
 	@Override
@@ -66,7 +68,7 @@ public class TestListener implements ITestListener, ISuiteListener{
 		sb.append("\n ##################################################### \n");
 		sb.append("Suite :"+suite.getName()+" Finished");
 		sb.append("\n ##################################################### \n");
-		LogUtil.logInfo(sb.toString());
+		LOG.logInfo(sb.toString());
 	}
 
 	@Override
@@ -75,7 +77,7 @@ public class TestListener implements ITestListener, ISuiteListener{
 		sb.append("\n ##################################################### \n");
 		sb.append("         Suite: "+suite.getName()+" Started         \n");
 		sb.append(" ##################################################### \n");
-		LogUtil.logInfo(sb.toString());
+		LOG.logInfo(sb.toString());
 	}
 
 }

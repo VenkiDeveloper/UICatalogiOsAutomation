@@ -8,11 +8,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.atmecs.appium.uicatalog.init.IOSCapabilityBuilder;
+import com.atmecs.appium.uicatalog.util.TestLogger;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
 public class BaseIOSTest {
+	
+	protected TestLogger LOG = TestLogger.getLogger(BaseIOSTest.class);
 	
 	IOSCapabilityBuilder iOSCapabilityBuilder = new IOSCapabilityBuilder();
 	protected IOSDriver<IOSElement> appiumIOSDriver;

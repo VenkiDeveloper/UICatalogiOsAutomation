@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.atmecs.appium.uicatalog.test.BaseIOSTest;
-import com.atmecs.appium.uicatalog.util.LogUtil;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.actionsheets.ActionSheetsView;
 
@@ -17,14 +16,14 @@ public class VerifyActionSheets extends BaseIOSTest{
 
 	@BeforeMethod
 	public void beforeMethodTapActionSheets(){
-		LogUtil.logSetUpStep("Before Method to Tap on Action Sheets");
+		LOG.logSetUpStep("Before Method to Tap on Action Sheets");
 		UICatalogView catalogView = new UICatalogView(this.appiumIOSDriver);
 		catalogView.tapActionSheets();
 	}
 	
 	@Test
 	public void verifyActionSheetsUIElements(){
-		LogUtil.logTestVerificationStep("verify ActionSheets UI Elements");
+		LOG.logTestVerificationStep("verify ActionSheets UI Elements");
 		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
 		Assert.assertTrue(actionSheetsView.isActionSheetsTitleVisible(),"Action Sheet title is not visible.");
 		Assert.assertTrue(actionSheetsView.isUICatalogButtonVisible(),"UI Catalog button is not visible.");
@@ -56,7 +55,7 @@ public class VerifyActionSheets extends BaseIOSTest{
 	
 	@AfterMethod
 	public void afterMethodNavigateToActionSheets(){
-		LogUtil.logTearDownStep("After Method for Navigating to Action Sheets.");
+		LOG.logTearDownStep("After Method for Navigating to Action Sheets.");
 		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
 		actionSheetsView.navigateToUICatalogPage();
 	}
