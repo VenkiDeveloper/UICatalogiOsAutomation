@@ -92,10 +92,7 @@ public class TestLogger {
 	 * @param message
 	 */
 	public void logSetUpStep(String message){
-		StringBuffer sb = new StringBuffer();
-		sb.append("###### SetUp ##########");
-		sb.append(message);
-		logInfo(sb.toString());
+		logInfo("SetUp: "+message);
 	}
 	
 	/**
@@ -103,10 +100,7 @@ public class TestLogger {
 	 * @param message
 	 */
 	public void logTearDownStep(String message){
-		StringBuffer sb = new StringBuffer();
-		sb.append("###### Tear Down ##########");
-		sb.append(message);
-		logInfo(sb.toString());
+		logInfo("Tear Down: "+message);
 	}
 	
 	/**

@@ -1,11 +1,13 @@
 package com.atmecs.appium.uicatalog.test.actionsheet;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.atmecs.appium.uicatalog.test.BaseIOSTest;
+import com.atmecs.appium.uicatalog.util.TestLogger;
 import com.atmecs.appium.uicatalog.views.UICatalogView;
 import com.atmecs.appium.uicatalog.views.actionsheets.ActionSheetsView;
 
@@ -13,7 +15,8 @@ import com.atmecs.appium.uicatalog.views.actionsheets.ActionSheetsView;
  * @author venkatesh
  */
 public class VerifyActionSheets extends BaseIOSTest{
-
+	 TestLogger LOG = TestLogger.getLogger(VerifyActionSheets.class);
+	 
 	@BeforeMethod
 	public void beforeMethodTapActionSheets(){
 		LOG.logSetUpStep("Before Method to Tap on Action Sheets");
@@ -23,7 +26,7 @@ public class VerifyActionSheets extends BaseIOSTest{
 	
 	@Test
 	public void verifyActionSheetsUIElements(){
-		LOG.logTestVerificationStep("verify ActionSheets UI Elements");
+		LOG.logTestVerificationStep("Verify ActionSheets UI Elements");
 		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
 		Assert.assertTrue(actionSheetsView.isActionSheetsTitleVisible(),"Action Sheet title is not visible.");
 		Assert.assertTrue(actionSheetsView.isUICatalogButtonVisible(),"UI Catalog button is not visible.");
@@ -32,7 +35,7 @@ public class VerifyActionSheets extends BaseIOSTest{
 	}
 	
 	
-	@Test
+	@Test(enabled=false)
 	public void verifyOkayOrCancelUIElements(){
 		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
 		actionSheetsView.tapOkayOrCancelButton();
@@ -42,7 +45,7 @@ public class VerifyActionSheets extends BaseIOSTest{
 		Assert.assertTrue(actionSheetsView.isOkayOrCancelButtonVisible(), "Okay/Cancel button is not visible.");
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void verifyOtherUIElements(){
 		ActionSheetsView actionSheetsView = new ActionSheetsView(appiumIOSDriver);
 		actionSheetsView.tapOtherButton();
